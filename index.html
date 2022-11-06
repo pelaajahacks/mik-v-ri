@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="index.js"></script>
+        <script>
+            getColor()
+        </script>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="top">
+                    <div class="title">
+                        <div id="hsl-title-text">HSL:än lipun väri</div>
+                    </div>
+                    <div class="info">
+                        HSL:än sovelluksesta voi ostaa lippuja, näissä lipuissa on väri,
+                        joka vaihtuu joka päivä. Tämä väri on enkryptoitu AES 128-bittisellä
+                        CBC enkryptiolla, jonka onnistuin murtamaan.
+                    </div>
+                </div>
+                    <div class="color">
+                        <table id="color">
+                            <tr>
+                                <th>Väri</th>
+                                <td class="color-table-td">
+                                    <div class="colorinfo">
+                                        <div id="colorhex1" class="thing-color">Not found!</div>
+                                        <div id="colorrgb1" class="thing-color">Not found!</div>
+                                    </div>
+                                    <div class="example" id="example1">
+                                        <img src="/img/spinner-crop.svg" alt="" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Huomisen väri</th>
+                                <td>
+                                    <div class="colorinfo">
+                                        <div id="colorhex2" class="thing-color">Not found!</div>
+                                        <div id="colorrgb2" class="thing-color">Not found!</div>
+                                    </div>
+                                    
+                                    <div class="example" id="example2">
+                                        <img src="/img/spinner-crop.svg" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="ticket">
+                        <div class="ticket-info">
+                            Lippu näyttäisi about tältä!
+                        </div>
+                        <div class="ticket-embed">
+                            <iframe src="/ticket.html" width="375px" height="538px" frameBorder="0" class="ticket-iframe">
+                                <p>Your browser does not support iframes.</p>
+                            </iframe>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                
+            </div>
+        </div>
+    
+    </body>
+</html>

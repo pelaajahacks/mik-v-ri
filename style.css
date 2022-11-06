@@ -1,0 +1,172 @@
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(fonts/GothamRounded-Bold.2975c95e.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Gotham Rounded Book;
+    src: url(fonts/GothamRounded-Book.cf3f9929.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(fonts/GothamRounded-Light.4b6767fc.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(fonts/GothamRounded-Medium.5a73657d.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #343434;
+    width: 100%;
+    overflow: auto;
+}
+html {}
+body {
+    min-width: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    margin-top: 0.1em;
+    text-align: center;
+    font-size: calc(64px + 1vw);
+    font-family: Gotham Rounded;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+}
+
+#hsl-title-text {
+    text-align: center;
+}
+
+#hsl-logo {
+    align-items: center;
+}
+
+.info {
+    margin-top: 4em;
+    font-size: calc(16px + 0.5vw);
+    font-family: Gotham Rounded;
+    color: #eee;
+    text-align: center;
+    width: 100%;
+}
+
+
+.ticket-info {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: Gotham Rounded;
+    color: #eee;
+    font-size: calc(16px + 2vw);;
+}
+.ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+@media (max-width:390px) {
+    .ticket-iframe {
+        margin: 0 auto;
+        width: 100%;
+        min-width: 0;
+    }
+}
+@media (max-width:270px) {
+    .ticket, .ticket-info {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+}
+.ticket-embed {
+    margin: 0 auto;
+}
+
+#color {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    min-width: 0px;
+    height: 100%;
+    width: auto;
+}
+
+.color {
+    margin-top: 2em;
+    display: flex;
+    font-family: Gotham Rounded;
+    color: #eee;
+    font-size:calc(8px + 2vw);
+    overflow: auto
+}
+
+
+
+
+th, td {
+    background-color: #242424;
+    margin-bottom: 1%;
+    padding: 1.5%;
+    display: flex;
+    min-width: 0;
+}
+
+.example {
+    align-items: center;
+    position: relative;
+    width: 40vw;
+    max-width: 200px;
+    min-width: 64px;
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+.colorinfo {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 1vw;
+    white-space: nowrap;
+    order: -1;
+}
+.colorinfo:not(:last-child) * {
+    margin-bottom: 0.5em;
+}
+
+.color-table-td {
+    overflow: auto;
+}
+
