@@ -130,7 +130,7 @@ body {
     display: flex;
     font-family: Gotham Rounded;
     color: #eee;
-    font-size:calc(8px + 2vw);
+    font-size: calc(16px + 0.5vw);
     overflow: auto
 }
 
@@ -140,7 +140,7 @@ body {
 th, td {
     background-color: #242424;
     margin-bottom: 1%;
-    padding: 1.5%;
+    padding: 1%;
     display: flex;
     min-width: 0;
 }
@@ -158,7 +158,7 @@ th, td {
 .colorinfo {
     display: inline-flex;
     flex-direction: column;
-    margin: 1vw;
+    margin: 0.5vw;
     white-space: nowrap;
     order: -1;
 }
