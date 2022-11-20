@@ -1,79 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        <script src="index.js"></script>
-        <script>
-            getColor()
-        </script>
-        
-        
-    </head>
-    <body>
-        <div class="container">
-            <div class="main">
-                <div class="top">
-                    <div class="title">
-                        <div id="hsl-title-text">HSL:än lipun väri</div>
-                    </div>
-                    <div class="info">
-                        HSL:än sovelluksesta voi ostaa lippuja, näissä lipuissa on väri,
-                        joka vaihtuu joka päivä. Tämä väri on enkryptoitu AES 128-bittisellä
-                        CBC enkryptiolla, jonka onnistuin murtamaan.
-                    </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no,shrink-to-fit=no">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]-->
+    <title>HSL</title>
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="pwa/splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/pwa/icons/favicon32.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#f4f4f5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="HSL Värit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f4f4f5">
+    <link rel="apple-touch-icon" href="/pwa/icons/apple152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <title>HSL Lippuväri</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        getColor()
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="top">
+                <div class="title">
+                    <div id="hsl-title-text text">HSL:än lipun väri</div>
                 </div>
-                    <div class="color">
-                        <table id="color">
-                            <tr>
-                                <th>Väri</th>
-                                <td>
-                                    <div class="colorinfo">
-                                        <div id="colorhex1" class="thing-color">Not found!</div>
-                                        <div id="colorrgb1" class="thing-color">Not found!</div>
-                                    </div>
-                                    <div class="example" id="example1">
-                                        <img src="/img/spinner-crop.svg" alt="" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                                    </div>
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Huomisen väri</th>
-                                <td>
-                                    <div class="colorinfo">
-                                        <div id="colorhex2" class="thing-color">Not found!</div>
-                                        <div id="colorrgb2" class="thing-color">Not found!</div>
-                                    </div>
-                                    
-                                    <div class="example" id="example2">
-                                        <img src="/img/spinner-crop.svg" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                                    </div>
-                                </td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                    <div class="ticket">
-                        <div class="ticket-info">
-                            Lippu näyttäisi about tältä!
-                        </div>
-                        <div class="ticket-embed">
-                            <iframe src="/ticket.html" width="375px" height="538px" frameBorder="0" class="ticket-iframe">
+                <div class="info text">
+                    HSL:än sovelluksesta voi ostaa lippuja, näissä lipuissa on väri, joka vaihtuu joka päivä. Tämä väri on enkryptoitu 128-bittisellä AES CBC enkryptiolla, jonka onnistuin murtamaan. <a href="https://discord.gg/Sa8zQ6AShZ" id="chat-link">Chatti</a>
+                </div>
+            </div>
+            <div class="color">
+                <table id="color">
+                    <tr>
+                        <th class="text-nohover">Väri</th>
+                        <td>
+                            <div class="colorinfo">
+                                <div id="colorhex1" class="thing-color text">Not found!</div>
+                                <div id="colorrgb1" class="thing-color text">Not found!</div>
+                            </div>
+                            <a href="" class="example" id="example1">
+                                <div>
+                                    <img src="/img/spinner-crop.svg" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                                </div>
+                            </a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-nohover">Huomisen väri</th>
+                        <td>
+                            <div class="colorinfo">
+                                <div id="colorhex2" class="thing-color text">Not found!</div>
+                                <div id="colorrgb2" class="thing-color text">Not found!</div>
+                            </div>
+                            <a href="" class="example" id="example2">
+                                <div>
+                                    <img src="/img/spinner-crop.svg" viewBox="0 0 120 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                                </div>
+                            </a>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="ticket">
+                <div class="ticket-info text">
+                    Lippu näyttäisi about tältä!
+                </div>
+                <div class="ticket-embed">
+                    <iframe src="/ticket.html" width="375px" height="538px" frameBorder="0" class="ticket-iframe">
                                 <p>Your browser does not support iframes.</p>
                             </iframe>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                
+                </div>
+
+
             </div>
+
+
         </div>
-    
-    </body>
+    </div>
+
+</body>
+
 </html>

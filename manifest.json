@@ -1,0 +1,29 @@
+{
+    "name": "HSL Värit",
+    "short_name": "HSL Värit",
+    "theme_color": "#007ac9",
+    "icons": [{
+            "src": "pwa/icons/any512.png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        { "src": "pwa/icons/any512.png", "sizes": "512x512", "purpose": "any" }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#007ac9",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "shortcuts": [{
+            "name": "Lippu Värit",
+            "short_name": "Vätit",
+            "url": "/"
+        },
+        {
+            "name": "HSL Sininen",
+            "short_name": "HSL",
+            "description": "Näe enemmän väreistä!",
+            "url": "/colors/007ac9"
+        }
+    ]
+}

@@ -5,6 +5,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: Gotham Rounded Book;
     src: url(fonts/GothamRounded-Book.cf3f9929.ttf) format("truetype");
@@ -12,6 +13,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: Gotham Rounded;
     src: url(fonts/GothamRounded-Light.4b6767fc.ttf) format("truetype");
@@ -19,6 +21,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: Gotham Rounded;
     src: url(fonts/GothamRounded-Medium.5a73657d.ttf) format("truetype");
@@ -32,13 +35,14 @@ body {
     width: 100%;
     overflow: auto;
 }
+
 html {}
+
 body {
     min-width: 100%;
     width: 100%;
     margin: 0;
 }
-
 
 .container {
     display: flex;
@@ -81,15 +85,16 @@ body {
     width: 100%;
 }
 
-
 .ticket-info {
     margin-top: 2em;
     margin-bottom: 1em;
     text-align: center;
     font-family: Gotham Rounded;
     color: #eee;
-    font-size: calc(16px + 2vw);;
+    font-size: calc(16px + 2vw);
+    ;
 }
+
 .ticket {
     display: flex;
     flex-direction: column;
@@ -106,13 +111,16 @@ body {
         min-width: 0;
     }
 }
+
 @media (max-width:270px) {
-    .ticket, .ticket-info {
+    .ticket,
+    .ticket-info {
         visibility: hidden;
         width: 0px;
         height: 0px;
     }
 }
+
 .ticket-embed {
     margin: 0 auto;
 }
@@ -134,25 +142,36 @@ body {
     overflow: auto
 }
 
-
-
-
-th, td {
+th,
+td {
     background-color: #242424;
     margin-bottom: 1%;
     padding: 1%;
     display: flex;
     min-width: 0;
+    max-width: 1000px;
+    width: 100%;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+th:hover,
+td:hover {
+    background-color: #181818;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
 }
 
 .example {
-    align-items: center;
     position: relative;
     width: 40vw;
-    max-width: 200px;
+    max-width: 165px;
     min-width: 64px;
-    border-radius: 4px;
+    /*float element right*/
     margin-left: auto;
+    order: 2;
+    float: right;
+    border-radius: 4px;
 }
 
 .colorinfo {
@@ -162,6 +181,7 @@ th, td {
     white-space: nowrap;
     order: -1;
 }
+
 .colorinfo:not(:last-child) * {
     margin-bottom: 0.5em;
 }
@@ -170,3 +190,10 @@ th, td {
     overflow: auto;
 }
 
+.text-nohover {
+    cursor: default;
+}
+
+#chat-link {
+    color: #007ac9;
+}
