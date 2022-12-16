@@ -1,6 +1,6 @@
 function getColor() {
     $.ajax({
-        url: "https://api.segso.net/hsl/color?jsonp=true",
+        url: "https://api.segso.net:8443/hsl/color?jsonp=true",
         type: 'GET',
         dataType: 'jsonp',
         crossDomain: true,
@@ -27,7 +27,7 @@ function getColor() {
 
 function getTicketColor() {
     $.ajax({
-        url: "https://api.segso.net/hsl/color?jsonp=true",
+        url: "https://api.segso.net:8443/hsl/color?jsonp=true&sannamarin=sannamarinonhoopoahh",
         type: 'GET',
         dataType: 'jsonp',
         crossDomain: true,
@@ -38,7 +38,7 @@ function getTicketColor() {
             'Access-Control-Allow-Origin': '*',
         },
         success: function(data) {
-            $(".svgspin").css({ "background-color": data.color[0].hexColor });
+            $(".svgspin").css({ "background-color": data.color });
 
         }
     });
