@@ -110,14 +110,20 @@ td:hover {
 }
 
 #card {
+    margin-top: 2em;
     display: flex;
-    overflow: none;
+    font-family: Gotham Rounded;
+    color: #eee;
+    font-size: calc(16px + 0.5vw);
+    overflow: auto
 }
 
 .colorinfo {
     margin: 0 auto;
-    min-height: 200px;
-    min-height: 200px;
+    margin-bottom: 1rem;
+    min-width: 0px;
+    height: 100%;
+    width: auto;
 }
 
 .nein {

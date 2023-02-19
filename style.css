@@ -82,7 +82,8 @@ body {
     font-family: Gotham Rounded;
     color: #eee;
     text-align: center;
-    width: 100%;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 .ticket-info {
